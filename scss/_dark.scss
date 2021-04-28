@@ -1,0 +1,126 @@
+body.dark {
+	background-color: $dark-bg;
+
+	main {
+		color: $dark-text;
+	}
+
+	// Header
+	header {
+		.top-pattern {
+			background: $dark-top-bg-pattern;
+		}
+
+		.header {
+			&-text {
+				h2 {
+					color: $dark-white-text;
+				}
+			}
+
+			.theme-switch {
+				.theme-toggle {
+					background: $dark-toggle;
+
+					&-indicator {
+						background: $dark-top-bg-pattern;
+					}
+				}
+			}
+		}
+	}
+
+	// Followers Section
+
+	.followers-grid {
+		&-item {
+			background: $dark-card-bg;
+
+			&:hover,
+			&:focus {
+				transition: 0.5s;
+				background: lighten($dark-card-bg, 13%);
+				outline: none;
+			}
+
+			.followers-count {
+				.followers-number {
+					color: $dark-white-text;
+				}
+			}
+		}
+
+		.facebook {
+			border-top: 6px solid $facebook-top;
+		}
+
+		.twitter {
+			border-top: 6px solid $twitter-top;
+		}
+
+		.instagram {
+			position: relative;
+		}
+
+		.instagram::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 6px;
+			background-image: $instagram-top;
+		}
+
+		.youtube {
+			border-top: 6px solid $youtube-top;
+		}
+	}
+
+	// Overview Section
+	.overview {
+		&-header {
+			color: $dark-white-text;
+		}
+
+		&-grid {
+			&-item {
+				background: $dark-card-bg;
+
+				&:hover,
+				&:focus {
+					transition: 0.5s;
+					background: lighten($dark-card-bg, 11%);
+					outline: none;
+				}
+
+				&-numbers {
+					p {
+						color: $dark-white-text;
+					}
+
+					.progress {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						p {
+							font-size: 0.75rem;
+							color: $lime-green;
+						}
+					}
+				}
+			}
+		}
+
+		.facebook-likes,
+		.youtube-likes,
+		.youtube-total-views {
+			.progress {
+				p {
+					color: $bright-red;
+				}
+			}
+		}
+	}
+}
